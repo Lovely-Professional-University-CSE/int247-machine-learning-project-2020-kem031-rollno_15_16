@@ -17,11 +17,11 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 df=pd.read_csv('news.csv')
 #Get shape and head
 df.shape
-df.head()
+print(df.head())
 
 #Get the labels
 labels=df.label
-labels.head()
+print(labels.head())
 
 #Split the dataset
 x_train,x_test,y_train,y_test=train_test_split(df['text'], labels, test_size=0.2, random_state=7)
@@ -41,4 +41,4 @@ score=accuracy_score(y_test,y_pred)
 print(f'Accuracy: {round(score*100,2)}%')
 
 #Build confusion matrix
-confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
+print(confusion_matrix(y_test,y_pred, labels=['FAKE','REAL']))
