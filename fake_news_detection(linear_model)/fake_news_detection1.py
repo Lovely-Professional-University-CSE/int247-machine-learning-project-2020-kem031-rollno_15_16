@@ -35,7 +35,9 @@ tfidf_test=tfidf_vectorizer.transform(x_test)
 #Initialize a PassiveAggressiveClassifier
 pac=PassiveAggressiveClassifier(max_iter=50)
 pac.fit(tfidf_train,y_train)
-
+#DataFlair - Predict on the test set and calculate accuracy
+y_pred=pac.predict(tfidf_test)
+score=accuracy_score(y_test,y_pred)
 
 #DataFlair - Build confusion matrix
 confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
