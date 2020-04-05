@@ -14,7 +14,7 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 #Read the data
-df=pd.read_csv('news.csv')
+df=pd.read_csv('Real_And_Fake_news_Dataset.csv')
 #Get shape and head
 df.shape
 print(df.head())
