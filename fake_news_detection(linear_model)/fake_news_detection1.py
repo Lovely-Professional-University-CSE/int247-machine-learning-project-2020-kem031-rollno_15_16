@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 10 11:54:11 2020
-
-@author: kiran pathro
-"""
-
 import numpy as np
 import pandas as pd
 import itertools
@@ -39,7 +32,7 @@ pac.fit(tfidf_train,y_train)
 y_pred=pac.predict(tfidf_test)
 score=accuracy_score(y_test,y_pred)
 
-#DataFlair - Build confusion matrix
+#Build confusion matrix
 confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
 
 
